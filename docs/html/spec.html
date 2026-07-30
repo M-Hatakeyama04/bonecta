@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>動画仕様書 — Bonecta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="site-nav" aria-label="資料ナビ">
+      <a href="./index.html">トップ</a>
+      <a href="./brief.html">開発依頼書</a>
+      <a href="./spec.html" aria-current="page">動画仕様書</a>
+      <a href="./package.html">共有パッケージ</a>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow">VIDEO SPEC</div>
+      <h1>Bonecta ショート動画<br />仕様書</h1>
+      <p class="lead">
+        go2senkyo.com の活動記録から 9:16 縦型ショート動画を生成する際の参照仕様です。
+        実装の正は <code>bonecta/</code> 配下のコード。本書は運用・レビュー用の要約です。
+      </p>
+      <dl class="meta-grid">
+        <div class="meta-item"><dt>解像度</dt><dd>1080 × 1920</dd></div>
+        <div class="meta-item"><dt>フレームレート</dt><dd>30 fps</dd></div>
+        <div class="meta-item"><dt>テロップ weight</dt><dd>Noto Sans JP 500</dd></div>
+        <div class="meta-item"><dt>最終更新</dt><dd>2026-07-16</dd></div>
+      </dl>
+    </header>
+
+    <section class="card" id="output">
+      <h2>1. 出力仕様</h2>
+      <table>
+        <thead><tr><th>項目</th><th>値</th></tr></thead>
+        <tbody>
+          <tr><td>解像度</td><td><strong>1080 × 1920</strong>（9:16）</td></tr>
+          <tr><td>フレームレート</td><td>30 fps</td></tr>
+          <tr><td>コーデック</td><td>H.264 / yuv420p（FFmpeg）</td></tr>
+          <tr><td>本編尺</td><td>最大 <strong>20 秒</strong>（テロップあり）／直接動画時は最大 <strong>15 秒</strong></td></tr>
+          <tr><td>エンドカード</td><td><strong>3 秒</strong>（クロスフェード 0.5 秒含む）</td></tr>
+          <tr><td>合計尺</td><td>おおよそ <strong>22〜23 秒</strong></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="pipeline">
+      <h2>2. 処理パイプライン</h2>
+      <pre><code>go2senkyo URL
+  → scraper.py      … HTML から本文・政治家情報・素材 URL を抽出
+  → media_fetcher.py … 画像 / 動画 / サムネをローカル取得
+  → analyzer.py     … MediaAsset 化・パターン分類・安全チェック
+  → composer.py     … タイムライン・テロップ ON/OFF を決定
+  → overlays.py     … バッジ・テロップ・エンドカード PNG を生成
+  → renderer.py     … FFmpeg で合成 → MP4</code></pre>
+
+      <h3>コマンド</h3>
+      <pre><code># 1 本（スクレイプから）
+python scripts/batch_go2senkyo.py   # 未生成のみ
+
+# 全本・再生成
+python scripts/batch_go2senkyo.py --force</code></pre>
+
+      <h3>出力ディレクトリ（1 記事あたり）</h3>
+      <pre><code>output/go2senkyo/{slug}/
+  {slug}.mp4          … 完成動画
+  post.json           … スクレイプ結果・素材メタ
+  ffmpeg_plan.json    … レンダリング計画（デバッグ用）
+  media/              … 取得済み画像・動画
+  .work/              … 中間ファイル（オーバーレイ PNG 等）</code></pre>
+    </section>
+
+    <section class="card" id="media-rules">
+      <h2>3. 素材の表示ルール（本編）</h2>
+      <p>
+        「動画」= 記事内の <strong>直接アップロード動画</strong>（<code>&lt;video&gt;</code> / <code>.mp4</code>）。
+        YouTube・Facebook・Instagram の <strong>埋め込みは動画本体を使わない</strong>。
+      </p>
+      <table>
+        <thead><tr><th>記事の内容</th><th>本編に表示するもの</th><th>テロップ</th></tr></thead>
+        <tbody>
+          <tr><td>画像のみ</td><td>ブログ画像（最大 5 枚スライド）</td><td class="ok">あり</td></tr>
+          <tr><td>画像なし・動画なし</td><td>政治家ポートレート</td><td class="ok">あり</td></tr>
+          <tr><td>画像 + 直接動画</td><td><strong>直接動画のみ</strong>（画像は使わない）</td><td class="ng">なし</td></tr>
+          <tr><td>直接動画のみ</td><td>直接動画</td><td class="ng">なし</td></tr>
+          <tr><td>YouTube（通常）</td><td><strong>YouTube 公式サムネ</strong>（横幅切れない pillarbox）</td><td class="ok">あり</td></tr>
+          <tr><td>YouTube Live</td><td>政治家ポートレート</td><td class="ok">あり</td></tr>
+          <tr><td>Facebook / Instagram 埋め込み</td><td>政治家ポートレート</td><td class="ok">あり</td></tr>
+          <tr><td>画像 + YouTube 等</td><td>画像 + サムネ／ポートレート（直接動画がなければ画像系）</td><td class="ok">あり</td></tr>
+        </tbody>
+      </table>
+
+      <h3>素材取得</h3>
+      <ul>
+        <li><strong>画像</strong> … 本文中の <code>&lt;img&gt;</code> をダウンロード</li>
+        <li><strong>直接動画</strong> … mp4 をダウンロード・ffprobe で長さ・音声有無を取得</li>
+        <li><strong>YouTube</strong> … 公式サムネ JPG（Live はポートレート）</li>
+        <li><strong>Facebook / Instagram</strong> … 政治家ポートレートを embed_thumbnail として使用</li>
+        <li><strong>フォールバック</strong> … 利用可能素材がなければ portrait_fallback.jpg</li>
+      </ul>
+      <div class="note">直接動画がある記事では、ブログ画像のダウンロード自体をスキップする。</div>
+    </section>
+
+    <section class="card" id="layout">
+      <h2>4. レイアウト・画像の見せ方</h2>
+      <h3>4.1 共通</h3>
+      <ul>
+        <li><strong>背景ウォッシュ</strong> … <code>#ECECE0</code> 相当を背景レイヤーのみに薄く敷く（前景の写真・UI にはかけない）</li>
+        <li><strong>横長・小さい画像</strong> … ぼかし背景（pillarbox）+ 中央に前景</li>
+        <li><strong>縦長画像</strong> … 全画面に近い表示（小サイズは pillarbox）</li>
+        <li><strong>切替</strong> … 0.5 秒クロスフェード。複数枚時は先頭 0.5 秒だけズームイン可</li>
+      </ul>
+
+      <h3>画角プリセット（crop_preset）</h3>
+      <table>
+        <thead><tr><th>プリセット</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td><code>default</code></td><td>標準。YouTube サムネは <strong>常に default</strong>（横幅全体を見せる）</td></tr>
+          <tr><td><code>wide</code></td><td>1 枚ブログ画像の前半</td></tr>
+          <tr><td><code>close</code></td><td>1 枚ブログ画像の後半／FB・IG・OG サムネ等</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 左上バッジ（全編常時表示）</h3>
+      <table>
+        <thead><tr><th>要素</th><th>仕様</th></tr></thead>
+        <tbody>
+          <tr><td>形状</td><td>黄緑（<code>#70C040</code>）の角丸ピル、枠線なし</td></tr>
+          <tr><td>左</td><td>円形アバター 96px（政治家ポートレート）</td></tr>
+          <tr><td>右</td><td><strong>名前</strong>（白・Bold 42px）＋ <strong>フリガナ / 年齢 / 性別</strong>（白・36px）</td></tr>
+          <tr><td>余白</td><td>左右 22px、上下 12px、アバターと文字の間 14px</td></tr>
+          <tr><td>位置</td><td>左上 <code>(28, 40)</code> 付近</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="telop">
+      <h2>5. テロップ（字幕）</h2>
+      <h3>5.1 表示条件</h3>
+      <ul>
+        <li><strong>テロップあり</strong> … 画像系本編のみ（上表参照）</li>
+        <li><strong>テロップなし</strong> … 直接動画が本編にある場合</li>
+      </ul>
+
+      <h3>5.2 文案</h3>
+      <ul>
+        <li>ブログ本文を整形せず句読点で分割</li>
+        <li>1 枚 <strong>最大 24 文字</strong>、<strong>最大 5 枚</strong></li>
+        <li>1 枚 <strong>4 秒</strong> → 本編最大 <strong>20 秒</strong></li>
+        <li>最終枚は <strong>「……（続く）」</strong> を付与</li>
+        <li>URL は除去</li>
+      </ul>
+
+      <h3>5.3 見た目</h3>
+      <table>
+        <thead><tr><th>項目</th><th>値</th></tr></thead>
+        <tbody>
+          <tr><td>位置</td><td>画面高さの <strong>62%</strong> 付近を中心</td></tr>
+          <tr><td>箱</td><td>白半透明 <code>rgba(255,255,255,200)</code>、角丸 14px</td></tr>
+          <tr><td>枠</td><td>黄緑 <strong>2px</strong>（<code>#70C040</code>）</td></tr>
+          <tr><td>文字色</td><td><code>#222222</code></td></tr>
+          <tr><td>字間</td><td>1px</td></tr>
+          <tr><td>フォントサイズ</td><td>32〜50px（箱幅に自動フィット）</td></tr>
+          <tr><td>パディング</td><td>横 30px / 縦 18px</td></tr>
+        </tbody>
+      </table>
+
+      <h3>5.4 フォント</h3>
+      <table>
+        <thead><tr><th>用途</th><th>フォント</th><th>weight</th></tr></thead>
+        <tbody>
+          <tr><td>テロップ</td><td>同梱 Noto Sans JP VF</td><td><strong>500</strong></td></tr>
+          <tr><td>バッジ名前・CTA</td><td>同上</td><td><strong>700</strong></td></tr>
+          <tr><td>メタ・注釈</td><td>同上</td><td><strong>400</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        ファイル: <code>fonts/NotoSansJP-VF.ttf</code>。
+        <strong>OS フォントへのフォールバックなし</strong>。文字はすべて生成時に画像化して MP4 に焼き込みます。
+      </div>
+    </section>
+
+    <section class="card" id="endcard">
+      <h2>6. エンドカード（末尾約 3 秒）</h2>
+      <table>
+        <thead><tr><th>要素</th><th>仕様</th></tr></thead>
+        <tbody>
+          <tr><td>背景</td><td>政治家肖像のぼかし + <code>#ECECE0</code> ウォッシュ（UI の背面のみ）</td></tr>
+          <tr><td>中央上</td><td>円形アバター <strong>340px</strong> + 緑リング <strong>12px</strong>（写真と密着）</td></tr>
+          <tr><td>名前</td><td>黒・太字・最大 72px（幅に応じて縮小）</td></tr>
+          <tr><td>文言</td><td><strong>「情報発信中！」</strong>（黒・56px 目安）</td></tr>
+          <tr><td>CTA</td><td>緑ピル 「続きは活動記録をチェック」+ 図形シェブロン（縦中央揃え）</td></tr>
+          <tr><td>フッター</td><td>「この動画はボネクタの活動記録に基き、AIで生成しています。」（グレー・26px）</td></tr>
+        </tbody>
+      </table>
+      <div class="note">トップの帯（ヘッダーバー）はなし。</div>
+    </section>
+
+    <section class="card" id="colors">
+      <h2>7. カラーパレット</h2>
+      <table>
+        <thead><tr><th>名前</th><th>値</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td>選挙ドットコム緑</td><td><code>#70C040</code></td><td>バッジ・テロップ枠・CTA・リング</td></tr>
+          <tr><td>緑（濃）</td><td><code>#589E30</code></td><td>CTA 縁取り</td></tr>
+          <tr><td>本文黒</td><td><code>#222222</code></td><td>テロップ・エンドカード名前</td></tr>
+          <tr><td>サブグレー</td><td><code>#5A5A5A</code></td><td>注釈</td></tr>
+          <tr><td>ページ背景</td><td><code>#ECECE0</code></td><td>背景ウォッシュ</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="audio">
+      <h2>8. 音声</h2>
+      <table>
+        <thead><tr><th>条件</th><th>音声</th></tr></thead>
+        <tbody>
+          <tr><td>直接動画に音声あり</td><td><strong>動画の音声を優先</strong>（BGM は下げる／ミュート）</td></tr>
+          <tr><td>それ以外</td><td><code>bgm/</code> からランダム BGM</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>9. 安全・ブロック</h2>
+      <p>
+        <code>analyzer.check_content_safety</code> で NG の場合、本編・テロップなしの短尺ブロック動画（約 5 秒）を出力します。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>10. 調整時の参照ファイル</h2>
+      <table>
+        <thead><tr><th>変更したい内容</th><th>ファイル</th></tr></thead>
+        <tbody>
+          <tr><td>表示ルール・尺・テロップ ON/OFF</td><td><code>bonecta/composer.py</code></td></tr>
+          <tr><td>素材取得・YouTube/FB/IG</td><td><code>bonecta/media_fetcher.py</code></td></tr>
+          <tr><td>バッジ・テロップ・エンドカード見た目</td><td><code>bonecta/overlays.py</code></td></tr>
+          <tr><td>テロップ文案・枚数・文字数</td><td><code>bonecta/telop.py</code></td></tr>
+          <tr><td>フォント weight</td><td><code>bonecta/fonts.py</code></td></tr>
+          <tr><td>FFmpeg 合成・レイアウト</td><td><code>bonecta/renderer.py</code></td></tr>
+          <tr><td>一括 URL リスト</td><td><code>scripts/batch_go2senkyo.py</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="checklist">
+      <h2>11. レビュー用チェックリスト</h2>
+      <div class="checklist">
+        <label><input type="checkbox" /> 素材種別に応じた表示になっているか</label>
+        <label><input type="checkbox" /> 直接動画時にテロップが出ていないか</label>
+        <label><input type="checkbox" /> YouTube サムネの横幅が切れていないか</label>
+        <label><input type="checkbox" /> 左上バッジにフリガナ・年齢が入っているか</label>
+        <label><input type="checkbox" /> テロップが読みやすく、最終枚に「……（続く）」があるか</label>
+        <label><input type="checkbox" /> エンドカードの CTA・円写真・注釈が意図どおりか</label>
+        <label><input type="checkbox" /> フォントが野暮ったくないか（Noto 500）</label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>12. バッチ検証セット</h2>
+      <p><code>scripts/batch_go2senkyo.py</code> に <strong>18 パターン</strong> を定義。代表例:</p>
+      <table>
+        <thead><tr><th>slug</th><th>検証内容</th></tr></thead>
+        <tbody>
+          <tr><td><code>01_images_landscape</code></td><td>横画像 + テロップ</td></tr>
+          <tr><td><code>07_no_images_no_thumb</code></td><td>ポートレートのみ</td></tr>
+          <tr><td><code>08_video_youtube_landscape_1</code></td><td>YouTube サムネ</td></tr>
+          <tr><td><code>11_video_portrait</code></td><td>Facebook → ポートレート</td></tr>
+          <tr><td><code>13_mixed_img_portrait_video</code></td><td>画像 + 埋め込み（直接動画なし）</td></tr>
+          <tr><td><code>17_special_live</code></td><td>YouTube Live → ポートレート</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p class="footer-note">最終更新: 2026-07-16（テロップ Noto Sans JP weight 500、埋め込み表示ルール、UI 調整を反映）</p>
+  </div>
+</body>
+</html>

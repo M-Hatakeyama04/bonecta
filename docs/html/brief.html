@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>開発依頼書 — Bonecta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="site-nav" aria-label="資料ナビ">
+      <a href="./index.html">トップ</a>
+      <a href="./brief.html" aria-current="page">開発依頼書</a>
+      <a href="./spec.html">動画仕様書</a>
+      <a href="./package.html">共有パッケージ</a>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow">DEVELOPMENT BRIEF</div>
+      <h1>Bonecta ショート動画自動生成<br />開発依頼書</h1>
+      <p class="lead">開発会社向けの依頼・要件・検収資料です。詳細の見た目・挙動は動画仕様書を正とします。</p>
+      <dl class="meta-grid">
+        <div class="meta-item"><dt>案件名</dt><dd>活動記録 → 縦型ショート動画</dd></div>
+        <div class="meta-item"><dt>作成日</dt><dd>2026-07-30</dd></div>
+        <div class="meta-item"><dt>関連仕様</dt><dd><a href="./spec.html">動画仕様書</a></dd></div>
+        <div class="meta-item"><dt>参考実装</dt><dd>リポジトリ <code>bonecta/</code></dd></div>
+      </dl>
+    </header>
+
+    <section class="card" id="purpose">
+      <h2>1. 依頼の目的</h2>
+      <p>
+        政治家・候補者の<strong>活動記録（ブログ記事）</strong>から、SNS投稿向けの
+        <strong>9:16 縦型ショート動画</strong>を自動生成する機能を依頼したい。
+      </p>
+      <p>
+        すでに動作する <strong>Python プロトタイプ</strong> と <strong>確定した画面仕様</strong> がある。
+        主目的は、これを<strong>本番利用できる形に仕上げ・統合・運用可能にする</strong>こと。
+      </p>
+      <h3>期待する価値</h3>
+      <ul>
+        <li>活動記録 URL を入れるだけで、投稿用ショート動画が得られる</li>
+        <li>素材タイプに応じて正しい見せ方になる</li>
+        <li>バッジ・テロップ・エンドカードがブランドとして統一されている</li>
+        <li>生成結果が端末・環境によらず同じ見た目になる（フォント焼き込み）</li>
+      </ul>
+    </section>
+
+    <section class="card" id="status">
+      <h2>2. 現状（プロトタイプ）</h2>
+      <h3>できていること</h3>
+      <ul>
+        <li>go2senkyo.com 記事のスクレイプ（本文、政治家名、フリガナ、年齢、ポートレート、素材）</li>
+        <li>素材種別に応じた取得・表示分岐</li>
+        <li>テロップ生成・オーバーレイ（左上バッジ／字幕／エンドカード）</li>
+        <li>FFmpeg による MP4 出力（1080×1920）</li>
+        <li>18 パターンのバッチ検証セット</li>
+      </ul>
+      <h3>本番化で追加しうるスコープ</h3>
+      <table>
+        <thead><tr><th>区分</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>A. プロダクト化</td><td>API化、ジョブキュー、進捗・失敗通知、リトライ</td></tr>
+          <tr><td>B. 画面</td><td>管理画面（URL入力→生成→プレビュー→ダウンロード）</td></tr>
+          <tr><td>C. 品質</td><td>テスト自動化、ログ、監視、エラーハンドリング強化</td></tr>
+          <tr><td>D. 統合</td><td>Bonecta 本体サービス／認証／ストレージとの接続</td></tr>
+          <tr><td>E. 運用</td><td>デプロイ、並列生成、コスト設計</td></tr>
+          <tr><td>F. 文言</td><td>テロップ要約の LLM 化（現状はルール分割）</td></tr>
+        </tbody>
+      </table>
+      <div class="note">必須要件は「動画の見た目・挙動仕様」。A〜F の発注範囲は見積時に指定する。</div>
+    </section>
+
+    <section class="card" id="deliverables">
+      <h2>3. 成果物</h2>
+      <h3>必須</h3>
+      <ol>
+        <li>活動記録 URL（または同等入力）から 9:16 MP4 を生成できること</li>
+        <li>本依頼書および動画仕様書の表示ルール・UI に準拠すること</li>
+        <li>サンプル 18 パターン相当の検証結果</li>
+        <li>セットアップ手順・運用手順書</li>
+        <li>ソースコード一式</li>
+      </ol>
+      <h3>任意（プロダクト化する場合）</h3>
+      <ol start="6">
+        <li>HTTP API（生成開始／状態取得／結果取得）</li>
+        <li>簡易 UI（プレビュー・ダウンロード）</li>
+        <li>オブジェクトストレージへの成果物保存</li>
+        <li>ジョブ失敗時の通知・再実行</li>
+      </ol>
+    </section>
+
+    <section class="card" id="requirements">
+      <h2>4. 機能要件</h2>
+      <h3>4.1 入力</h3>
+      <ul>
+        <li>go2senkyo.com の活動記録 URL<br /><code>https://go2senkyo.com/seijika/{id}/posts/{post_id}</code></li>
+        <li>（将来）Bonecta 側の活動記録 ID / 内部 API</li>
+      </ul>
+
+      <h3>4.2 抽出する情報</h3>
+      <table>
+        <thead><tr><th>情報</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td>記事タイトル・本文</td><td>テロップ生成</td></tr>
+          <tr><td>政治家氏名</td><td>バッジ・エンドカード</td></tr>
+          <tr><td>フリガナ / 年齢 / 性別</td><td>バッジメタ行</td></tr>
+          <tr><td>ポートレート画像</td><td>バッジ・エンドカード・フォールバック</td></tr>
+          <tr><td>本文画像</td><td>本編スライド</td></tr>
+          <tr><td>直接動画（mp4 等）</td><td>本編（優先）</td></tr>
+          <tr><td>YouTube / FB / IG 埋め込み</td><td>ルールに従いサムネ or ポートレート</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.3 本編表示ルール（必須）</h3>
+      <table>
+        <thead><tr><th>#</th><th>条件</th><th>表示</th><th>テロップ</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>画像のみ</td><td>画像</td><td class="ok">あり</td></tr>
+          <tr><td>2</td><td>画像なし・動画なし</td><td>政治家画像</td><td class="ok">あり</td></tr>
+          <tr><td>3</td><td>画像 + 直接動画</td><td>直接動画</td><td class="ng">なし</td></tr>
+          <tr><td>4</td><td>直接動画のみ</td><td>直接動画</td><td class="ng">なし</td></tr>
+          <tr><td>5</td><td>YouTube（VOD）</td><td>サムネイル（横幅全表示）</td><td class="ok">あり</td></tr>
+          <tr><td>6</td><td>YouTube Live</td><td>政治家画像</td><td class="ok">あり</td></tr>
+          <tr><td>7</td><td>Facebook / Instagram</td><td>政治家画像</td><td class="ok">あり</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>「動画」は<strong>直接アップロードのみ</strong>。埋め込み動画本体のダウンロード・再配布はしない</li>
+        <li>YouTube 通常は<strong>公式サムネイル</strong>を使い、横を切らない</li>
+        <li>画像は最大 5 枚。切替は 0.5 秒クロスフェード</li>
+      </ul>
+
+      <h3>4.4 テロップ</h3>
+      <ul>
+        <li>最大 5 枚 × 4 秒、1 枚あたり最大 24 文字目安</li>
+        <li>最終枚に「……（続く）」</li>
+        <li>白半透明背景 + 緑枠 2px + 黒文字</li>
+        <li>同梱 Noto Sans JP、weight <strong>500</strong></li>
+        <li>文字は動画に焼き込む</li>
+      </ul>
+
+      <h3>4.5 左上バッジ</h3>
+      <ul>
+        <li>緑ピル、円形ポートレート、氏名（Bold）、フリガナ/年齢/性別</li>
+        <li>余白: 左右 22px 前後、上下 12px 前後</li>
+      </ul>
+
+      <h3>4.6 エンドカード</h3>
+      <ul>
+        <li>円形ポートレート + 緑リング（隙間なく密着）</li>
+        <li>「{名前}」「情報発信中！」</li>
+        <li>CTA: 「続きは活動記録をチェック」+ <code>&gt;</code>（縦中央）</li>
+        <li>免責文を下部に表示。ヘッダー帯は置かない</li>
+      </ul>
+
+      <h3>4.7 音声</h3>
+      <ul>
+        <li>直接動画に音声がある → 動画音声優先</li>
+        <li>それ以外 → BGM</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>5. 非機能要件</h2>
+      <table>
+        <thead><tr><th>項目</th><th>要件</th></tr></thead>
+        <tbody>
+          <tr><td>見た目の再現性</td><td>同梱フォントのみ。環境差で字形が変わらないこと</td></tr>
+          <tr><td>依存</td><td>Python 3.11+、FFmpeg / ffprobe、Pillow、requests、BeautifulSoup</td></tr>
+          <tr><td>性能</td><td>1 本あたり数分以内を目標</td></tr>
+          <tr><td>信頼性</td><td>一部素材失敗時も可能な範囲で継続</td></tr>
+          <tr><td>ログ</td><td>失敗理由が追えること</td></tr>
+          <tr><td>セキュリティ</td><td>秘密情報をリポジトリに含めない</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>6. 技術スタック（現行）</h2>
+      <table>
+        <thead><tr><th>層</th><th>技術</th></tr></thead>
+        <tbody>
+          <tr><td>言語</td><td>Python</td></tr>
+          <tr><td>HTML 解析</td><td>BeautifulSoup</td></tr>
+          <tr><td>画像処理</td><td>Pillow</td></tr>
+          <tr><td>動画処理</td><td>FFmpeg / ffprobe</td></tr>
+          <tr><td>フォント</td><td>Noto Sans JP Variable（同梱）</td></tr>
+          <tr><td>入力元</td><td>go2senkyo.com 公開ページ</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>7. 受け入れ条件</h2>
+      <ol>
+        <li>1080×1920 の MP4 が出力される</li>
+        <li>素材表示ルール（§4.3）を満たす</li>
+        <li>直接動画本編ではテロップが出ない</li>
+        <li>YouTube VOD はサムネ表示、横幅が切れない</li>
+        <li>YouTube Live / FB / IG は政治家画像 + テロップ</li>
+        <li>左上バッジ・エンドカードが仕様どおり</li>
+        <li>フォントは同梱 Noto Sans JP（テロップ weight 500）</li>
+        <li>仕様書チェックリストを通過</li>
+        <li>代表パターンの確認動画を提出</li>
+        <li>ソース・手順書・依存一覧を納品</li>
+      </ol>
+    </section>
+
+    <section class="card" id="estimate">
+      <h2>8. 見積依頼時に指定する項目</h2>
+      <p>発注者が記入する欄です。</p>
+      <table>
+        <thead><tr><th>項目</th><th>記入</th></tr></thead>
+        <tbody>
+          <tr><td>希望スコープ（A〜F）</td><td contenteditable="true">&nbsp;</td></tr>
+          <tr><td>納期</td><td contenteditable="true">&nbsp;</td></tr>
+          <tr><td>予算感</td><td contenteditable="true">&nbsp;</td></tr>
+          <tr><td>公開 / 社内のみ</td><td contenteditable="true">&nbsp;</td></tr>
+          <tr><td>Bonecta 本体との連携</td><td contenteditable="true">&nbsp;</td></tr>
+          <tr><td>インフラ希望</td><td contenteditable="true">&nbsp;</td></tr>
+          <tr><td>テロップを LLM 化するか</td><td contenteditable="true">&nbsp;</td></tr>
+          <tr><td>保守・運用の要否</td><td contenteditable="true">&nbsp;</td></tr>
+        </tbody>
+      </table>
+      <div class="note">表の右列はブラウザ上で直接書き込めます。印刷前に記入してください。</div>
+    </section>
+
+    <section class="card">
+      <h2>9. スコープ外（原則）</h2>
+      <ul>
+        <li>YouTube / Facebook / Instagram 動画本体のダウンロード・再配布</li>
+        <li>選挙運動の法務判断そのもの（免責文の表示は行う）</li>
+        <li>SNS への自動投稿</li>
+        <li>モバイルネイティブアプリ実装</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>10. 次アクション</h2>
+      <ol>
+        <li>本資料 + 動画仕様書 + サンプル MP4 を共有</li>
+        <li>希望スコープを確定</li>
+        <li>見積・スケジュール受領</li>
+        <li>キックオフでデモと受け入れパターンを合意</li>
+      </ol>
+    </section>
+
+    <p class="footer-note">現行プロトタイプ（2026-07 時点）の確定仕様に基づく。実装詳細はリポジトリを正とする。</p>
+  </div>
+</body>
+</html>

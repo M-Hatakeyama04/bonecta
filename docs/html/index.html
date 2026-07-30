@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bonecta 開発依頼パッケージ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="site-nav" aria-label="資料ナビ">
+      <a href="./index.html" aria-current="page">トップ</a>
+      <a href="./brief.html">開発依頼書</a>
+      <a href="./spec.html">動画仕様書</a>
+      <a href="./package.html">共有パッケージ</a>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow">BONECTA / VENDOR PACKAGE</div>
+      <h1>ショート動画自動生成<br />開発依頼パッケージ</h1>
+      <p class="lead">
+        政治家の活動記録から 9:16 ショート動画を生成する機能について、
+        開発会社へ渡す依頼資料一式です。ブラウザで開き、印刷や PDF 化もできます。
+      </p>
+      <dl class="meta-grid">
+        <div class="meta-item"><dt>作成日</dt><dd>2026-07-30</dd></div>
+        <div class="meta-item"><dt>対象</dt><dd>開発会社 / 制作パートナー</dd></div>
+        <div class="meta-item"><dt>プロトタイプ</dt><dd>Python + FFmpeg</dd></div>
+        <div class="meta-item"><dt>出力</dt><dd>1080×1920 MP4</dd></div>
+      </dl>
+    </header>
+
+    <section class="card">
+      <h2>まず読む順番</h2>
+      <div class="toc">
+        <a href="./brief.html">
+          1. 開発依頼書
+          <span>目的・要件・検収・見積記入欄。発注の入口。</span>
+        </a>
+        <a href="./spec.html">
+          2. 動画仕様書
+          <span>素材ルール、UI、フォント、カラー、チェックリスト。</span>
+        </a>
+        <a href="./package.html">
+          3. 共有パッケージ案内
+          <span>何を渡すか、サンプル MP4 の送り方、再現手順。</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>依頼の一言要約</h2>
+      <p>
+        go2senkyo.com の活動記録 URL から、SNS向け縦型ショート動画を自動生成したい。
+        すでに動くプロトタイプと確定仕様があるので、それを本番利用できる形に仕上げてほしい。
+      </p>
+      <div class="callout">
+        <strong>必須で守ってほしいこと:</strong>
+        素材タイプごとの表示ルール、テロップ有無、左上バッジ、エンドカード、
+        同梱フォント（Noto Sans JP）による見た目の固定。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>発注前に発注者が決めること</h2>
+      <ul>
+        <li>スコープ（仕様準拠の生成のみ / API化 / 管理画面 / 本体統合 など）</li>
+        <li>納期・予算感</li>
+        <li>サンプル MP4 の共有方法（Drive 等）</li>
+        <li>テロップをルール分割のままにするか、LLM 化するか</li>
+      </ul>
+      <p>詳細の記入欄は <a href="./brief.html#estimate">開発依頼書 §見積依頼項目</a> にあります。</p>
+    </section>
+
+    <p class="footer-note">印刷時は各ページのブラウザ印刷 → PDF 保存が便利です。</p>
+  </div>
+</body>
+</html>
