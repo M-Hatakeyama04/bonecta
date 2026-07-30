@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Generated video outputs (largest; regenerate with batch script)
+output/
+
+# Per-run work dirs anywhere
+**/.work/
+**/.work_preview/
+
+# Sample / scraped media caches (regenerate locally)
+data/media/
+
+# Optional: unused legacy fonts (keep only NotoSansJP-VF.ttf in fonts/)
+# fonts/MPLUS1p-Medium.ttf
+# fonts/ZenKakuGothicNew-Medium.ttf

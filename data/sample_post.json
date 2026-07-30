@@ -1,0 +1,43 @@
+{
+  "text": "本日は地元の秋祭りに参加しました！4年ぶりの通常開催ということで、会場は熱気に包まれていました。多くの市民の方から『頑張って！』と声をかけていただき、改めて身が引き締まる思いです。これからも地域に根差した活動を続けてまいります。明日は駅前での街頭演説からスタートします！",
+  "politician": {
+    "name": "山田太郎",
+    "name_reading": "やまだたろう",
+    "district": "東京第1区",
+    "party": "自由民主党",
+    "party_color": "#E60012"
+  },
+  "media": [
+    {
+      "id": "photo_a",
+      "kind": "image",
+      "url": "https://example.com/photo_a_wide.jpg",
+      "local_file": "photo_a_wide.jpg",
+      "orientation": "landscape"
+    },
+    {
+      "id": "photo_b",
+      "kind": "image",
+      "url": "https://example.com/photo_b_tall.jpg",
+      "local_file": "photo_b_tall.jpg",
+      "orientation": "portrait"
+    },
+    {
+      "id": "photo_c",
+      "kind": "image",
+      "url": "https://example.com/photo_c_small.jpg",
+      "local_file": "photo_c_small.jpg",
+      "orientation": "landscape",
+      "size_tier": "small"
+    },
+    {
+      "id": "video_d",
+      "kind": "video",
+      "url": "https://example.com/video_d_speech.mp4",
+      "local_file": "video_d_speech.mp4",
+      "orientation": "landscape",
+      "duration_sec": 30,
+      "has_audio": true
+    }
+  ]
+}
