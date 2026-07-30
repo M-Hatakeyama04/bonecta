@@ -1,0 +1,70 @@
+{
+  "pattern_blocked": false,
+  "steps": [
+    {
+      "step": "segment_0",
+      "asset_id": "img_1",
+      "kind": "image",
+      "layout": "full",
+      "duration_sec": 10.0,
+      "fade_out_sec": 0.5,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "wide",
+      "keep_audio": false
+    },
+    {
+      "step": "segment_1",
+      "asset_id": "img_1",
+      "kind": "image",
+      "layout": "full",
+      "duration_sec": 10.0,
+      "fade_out_sec": 0.5,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "close",
+      "keep_audio": false
+    },
+    {
+      "step": "segment_2",
+      "asset_id": "end_card",
+      "kind": "end_card",
+      "layout": "blur_pillarbox",
+      "duration_sec": 2.5,
+      "fade_out_sec": 0.0,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "default",
+      "keep_audio": false
+    },
+    {
+      "step": "xfade",
+      "duration": 0.5
+    },
+    {
+      "step": "overlay",
+      "watermark": "いそべ 尚哉",
+      "telops": [
+        "はじめまして",
+        "日本維新の会 横浜市都筑区 市政担当の",
+        "いそべ 尚哉　と申します",
+        "昨秋より日本維新の会の一員として都筑区内で街頭等",
+        "日々活動しております……（続く）"
+      ]
+    },
+    {
+      "step": "bgm",
+      "path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/bgm/BGM_5.mp3",
+      "has_video_audio": false
+    },
+    {
+      "step": "end_card",
+      "duration": 3.0
+    },
+    {
+      "step": "encode",
+      "output": "output/go2senkyo/05_images_portrait_small/05_images_portrait_small.mp4",
+      "resolution": "1080x1920"
+    }
+  ]
+}

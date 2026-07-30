@@ -1,0 +1,30 @@
+{
+  "slug": "07_no_images_no_thumb",
+  "label": "画像なし",
+  "url": "https://go2senkyo.com/seijika/198127/posts/1403340",
+  "title": "中野区長選挙と杉並区長選挙",
+  "politician": {
+    "name": "山片 賢一",
+    "name_reading": "ヤマガタケンイチ",
+    "district": "新宿区議会",
+    "party": "",
+    "party_color": "#555555",
+    "age": "59歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "portrait",
+      "kind": "thumbnail",
+      "url": "https://prod-cdn.go2senkyo.com/uploads/seijika/image_file_name/198127/thumb_658738e1206411df00367feee78bb54b.jpg",
+      "width": 459,
+      "height": 612,
+      "orientation": "portrait",
+      "size_tier": "small",
+      "local_file": "portrait.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/07_no_images_no_thumb/media/politician_portrait.jpg",
+  "text_preview": "中野や高円寺の個人店に若い頃から飲みに行っていましたが安くて美味しい店が多く好きなエリア。\nその中野の象徴である中野サンプラザの行方を見守っていましたが再開発の方向に向かっているようで残念です。\n大山や高円寺、高田馬場も同じように見ていますが次は杉並区。\n大決起集会として多くの人が集会に集まっているようです。\n様々な意見があるのは承知していますが、先人の作り上げた町並みを残す、活かす方向に進んで頂"
+}

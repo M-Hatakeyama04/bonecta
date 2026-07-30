@@ -1,0 +1,43 @@
+{
+  "slug": "14_mixed_youtube_landscape_img",
+  "label": "YouTube+横画像",
+  "url": "https://go2senkyo.com/seijika/180432/posts/911646",
+  "title": "石丸伸二 #東京を動かそう",
+  "politician": {
+    "name": "石丸 伸二",
+    "name_reading": "イシマルシンジ",
+    "district": "選挙区",
+    "party": "",
+    "party_color": "#555555",
+    "age": "43歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://prod-cdn.go2senkyo.com/uploads/ckeditor/pictures/1312019/848babce-c7b0-4e0e-9c51-e4cee99d2e00.jpg",
+      "width": 1872,
+      "height": 1139,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "img_1.jpg",
+      "status": "available"
+    },
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=rfxJlecFtKA",
+      "embed_platform": "youtube",
+      "is_live": false,
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "yt_1_thumb.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/14_mixed_youtube_landscape_img/media/politician_portrait.jpg",
+  "text_preview": "石丸伸二です。ついに東京に出てきました。僕はこれから難しい挑戦をしようとしています。この挑戦は、自分一人で終わるものではなく、いろんな方と一緒に成し遂げるものだと思っています。ぜひ皆さんも一緒に、この挑戦に乗ってみてください！\nインターネット献金のお願い\n献金のお願いをさせて下さい。\n献金は以下のリンクから受け付けています。（一口、1,000円～150万円（個人の上限）まで個人献金が可能です。）\n"
+}

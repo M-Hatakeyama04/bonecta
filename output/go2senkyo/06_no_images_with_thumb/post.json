@@ -1,0 +1,30 @@
+{
+  "slug": "06_no_images_with_thumb",
+  "label": "画像なし（サムネ）",
+  "url": "https://go2senkyo.com/seijika/183086/posts/1396802",
+  "title": "【物価高に負けない】「第5回レシートde商品券」で地元を応援＆お得にお買い物！",
+  "politician": {
+    "name": "土田 しん",
+    "name_reading": "ツチダシン",
+    "district": "選挙区",
+    "party": "",
+    "party_color": "#555555",
+    "age": "35歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "thumb_og",
+      "kind": "thumbnail",
+      "url": "https://prod-cdn.go2senkyo.com/uploads/blogit/post/thumbnail/1396802/1c78ec62-52df-4fe9-a6d8-0ed204ec5245.jpg",
+      "width": 1080,
+      "height": 1018,
+      "orientation": "square",
+      "size_tier": "normal",
+      "local_file": "thumb_og.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/06_no_images_with_thumb/media/politician_portrait.jpg",
+  "text_preview": "足立区にお住まいの皆様、こんにちは。土田しんです。\n日々の生活の中で、食料品や日用品など様々なものの値上がりを実感されている方も多いのではないでしょうか。家計の負担が増える中、皆様の暮らしを少しでも支え、同時に私たちの愛する地元の商店街やお店を元気にするための取り組みが足立区で行われているので、ご紹介します！\nそれが、\n現在足立区で実施中の「第5回レシートde商品券事業」\nです。\n毎回大変ご好評を"
+}

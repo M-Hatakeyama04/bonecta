@@ -1,0 +1,58 @@
+{
+  "pattern_blocked": false,
+  "steps": [
+    {
+      "step": "segment_0",
+      "asset_id": "thumb_og",
+      "kind": "thumbnail",
+      "layout": "blur_pillarbox",
+      "duration_sec": 20.0,
+      "fade_out_sec": 0.5,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "close",
+      "keep_audio": false
+    },
+    {
+      "step": "segment_1",
+      "asset_id": "end_card",
+      "kind": "end_card",
+      "layout": "blur_pillarbox",
+      "duration_sec": 2.5,
+      "fade_out_sec": 0.0,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "default",
+      "keep_audio": false
+    },
+    {
+      "step": "xfade",
+      "duration": 0.5
+    },
+    {
+      "step": "overlay",
+      "watermark": "土田 しん",
+      "telops": [
+        "足立区にお住まいの皆様、こんにちは",
+        "土田しんです",
+        "日々の生活の中で、食料品や日用品など様々なものの",
+        "値上がりを実感されている方も多いので",
+        "はないでしょうか……（続く）"
+      ]
+    },
+    {
+      "step": "bgm",
+      "path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/bgm/BGM_2.mp3",
+      "has_video_audio": false
+    },
+    {
+      "step": "end_card",
+      "duration": 3.0
+    },
+    {
+      "step": "encode",
+      "output": "output/go2senkyo/06_no_images_with_thumb/06_no_images_with_thumb.mp4",
+      "resolution": "1080x1920"
+    }
+  ]
+}

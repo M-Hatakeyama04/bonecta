@@ -1,0 +1,70 @@
+{
+  "pattern_blocked": false,
+  "steps": [
+    {
+      "step": "segment_0",
+      "asset_id": "img_1",
+      "kind": "image",
+      "layout": "blur_pillarbox",
+      "duration_sec": 10.0,
+      "fade_out_sec": 0.5,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "wide",
+      "keep_audio": false
+    },
+    {
+      "step": "segment_1",
+      "asset_id": "img_1",
+      "kind": "image",
+      "layout": "blur_pillarbox",
+      "duration_sec": 10.0,
+      "fade_out_sec": 0.5,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "close",
+      "keep_audio": false
+    },
+    {
+      "step": "segment_2",
+      "asset_id": "end_card",
+      "kind": "end_card",
+      "layout": "blur_pillarbox",
+      "duration_sec": 2.5,
+      "fade_out_sec": 0.0,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "default",
+      "keep_audio": false
+    },
+    {
+      "step": "xfade",
+      "duration": 0.5
+    },
+    {
+      "step": "overlay",
+      "watermark": "川崎 ようこ",
+      "telops": [
+        "この1週間、連日の大きな音で",
+        "地域の皆さまにはご迷惑をおかけしましたが、",
+        "温かいご理解とご協力に、心より感謝申し上げます",
+        "本日、23:59まで選挙運動が可能です",
+        "まだ時間はあります……（続く）"
+      ]
+    },
+    {
+      "step": "bgm",
+      "path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/bgm/BGM_2.mp3",
+      "has_video_audio": false
+    },
+    {
+      "step": "end_card",
+      "duration": 3.0
+    },
+    {
+      "step": "encode",
+      "output": "output/go2senkyo/01_images_landscape/01_images_landscape.mp4",
+      "resolution": "1080x1920"
+    }
+  ]
+}

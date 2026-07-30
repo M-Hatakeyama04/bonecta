@@ -1,0 +1,32 @@
+{
+  "slug": "18_special_embed",
+  "label": "特殊埋込",
+  "url": "https://go2senkyo.com/seijika/141939/posts/1364579",
+  "title": "都構想一択はおかしい 新しい選択肢「大阪特別市」をつくる 国民民主党大阪府連大会2026.4.25",
+  "politician": {
+    "name": "足立 康史",
+    "name_reading": "アダチヤスシ",
+    "district": "選挙区",
+    "party": "",
+    "party_color": "#555555",
+    "age": "",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=cA9OUwgA57k",
+      "embed_platform": "youtube",
+      "is_live": false,
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "yt_1_thumb.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/18_special_embed/media/politician_portrait.jpg",
+  "text_preview": "続きをみる"
+}

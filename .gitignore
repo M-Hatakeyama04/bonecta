@@ -13,16 +13,16 @@ __pycache__/
 .vscode/
 *.swp
 
-# Generated video outputs (largest; regenerate with batch script)
-output/
-
-# Per-run work dirs anywhere
-**/.work/
+# Intermediate render work (do not upload)
+output/**/.work/
+output/**/.work_preview/
+output/.work/
 **/.work_preview/
 
-# Sample / scraped media caches (regenerate locally)
-data/media/
+# Obsolete leftover source downloads (old yt-dlp / FB fetches; can be 300MB+)
+output/**/media/yt_*.mp4
+output/**/media/fb_*.mp4
+output/**/media/ig_*.mp4
 
-# Optional: unused legacy fonts (keep only NotoSansJP-VF.ttf in fonts/)
-# fonts/MPLUS1p-Medium.ttf
-# fonts/ZenKakuGothicNew-Medium.ttf
+# Batch logs
+output/**/*.log

@@ -1,0 +1,76 @@
+{
+  "slug": "09_video_youtube_landscape_2",
+  "label": "YouTube横2",
+  "url": "https://go2senkyo.com/seijika/168370/posts/662536",
+  "title": "台東区議会議員選挙が始まりました！【大浦みすず活動記録①】",
+  "politician": {
+    "name": "大浦 みすず",
+    "name_reading": "オオウラミスズ",
+    "district": "台東区議会議員",
+    "party": "",
+    "party_color": "#555555",
+    "age": "",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=940x10000:format=jpg/path/s50d463d334c3367d/image/id465ed71ba934ff9/version/1681684814/image.jpg",
+      "width": 940,
+      "height": 1193,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_1.jpg",
+      "status": "available"
+    },
+    {
+      "id": "img_2",
+      "kind": "image",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=940x10000:format=jpg/path/s50d463d334c3367d/image/i013f8ea186bd2bcc/version/1681684373/image.jpg",
+      "width": 940,
+      "height": 940,
+      "orientation": "square",
+      "size_tier": "normal",
+      "local_file": "img_2.jpg",
+      "status": "available"
+    },
+    {
+      "id": "img_3",
+      "kind": "image",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=940x10000:format=jpg/path/s50d463d334c3367d/image/if4a6604e7501ef73/version/1681684496/image.jpg",
+      "width": 940,
+      "height": 1254,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_3.jpg",
+      "status": "available"
+    },
+    {
+      "id": "img_4",
+      "kind": "image",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=940x10000:format=jpg/path/s50d463d334c3367d/image/i52eae576e771a4eb/version/1681684511/image.jpg",
+      "width": 940,
+      "height": 1253,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_4.jpg",
+      "status": "available"
+    },
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=yeCdFvLWJhA",
+      "embed_platform": "youtube",
+      "is_live": false,
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "yt_1_thumb.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/09_video_youtube_landscape_2/media/politician_portrait.jpg",
+  "text_preview": "昨日（４月16日）は台東区区議会選挙の告示日でした！\n鶯谷駅北口のロータリーで出陣式を行いました。上の動画はそのときの様子のダイジェストです。\nいよいよ区議会議員選挙が始まり、まず行うのが出陣式！\n雨が降ったり氷(ひょう)まで降ってどうなることやらとドキドキしましたが、なんと嘘のように雨が上がり晴天の中、鶯谷駅北口前ロータリーにて15時から開催。\n辻清人衆議院議員、前台東区長服部ゆくお、鈴木純都議"
+}

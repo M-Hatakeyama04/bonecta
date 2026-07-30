@@ -1,0 +1,58 @@
+{
+  "pattern_blocked": false,
+  "steps": [
+    {
+      "step": "segment_0",
+      "asset_id": "fb_1",
+      "kind": "embed_thumbnail",
+      "layout": "blur_pillarbox",
+      "duration_sec": 20.0,
+      "fade_out_sec": 0.5,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "close",
+      "keep_audio": false
+    },
+    {
+      "step": "segment_1",
+      "asset_id": "end_card",
+      "kind": "end_card",
+      "layout": "blur_pillarbox",
+      "duration_sec": 2.5,
+      "fade_out_sec": 0.0,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "default",
+      "keep_audio": false
+    },
+    {
+      "step": "xfade",
+      "duration": 0.5
+    },
+    {
+      "step": "overlay",
+      "watermark": "田中 むつお",
+      "telops": [
+        "2026.6.8(月)",
+        "‎新松戸西小スクールガード",
+        "‎熱帯低気圧の影響は少なく、",
+        "ふだんの雨の日程度の風雨",
+        "‎月曜日は荷物が多いから……（続く）"
+      ]
+    },
+    {
+      "step": "bgm",
+      "path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/bgm/BGM_5.mp3",
+      "has_video_audio": false
+    },
+    {
+      "step": "end_card",
+      "duration": 3.0
+    },
+    {
+      "step": "encode",
+      "output": "output/go2senkyo/12_video_broken/12_video_broken.mp4",
+      "resolution": "1080x1920"
+    }
+  ]
+}

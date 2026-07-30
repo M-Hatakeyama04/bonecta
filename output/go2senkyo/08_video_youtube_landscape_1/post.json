@@ -1,0 +1,32 @@
+{
+  "slug": "08_video_youtube_landscape_1",
+  "label": "YouTube横",
+  "url": "https://go2senkyo.com/seijika/187819/posts/1403319",
+  "title": "【とよさんぽ Vol.243】お台場ファウンテン、アクアシンフォニー【港区議とよ島くにひろ】",
+  "politician": {
+    "name": "とよ島 くにひろ",
+    "name_reading": "トヨシマクニヒロ",
+    "district": "港区議会議員",
+    "party": "",
+    "party_color": "#555555",
+    "age": "50歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=2jW3GIdZz2k",
+      "embed_platform": "youtube",
+      "is_live": false,
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "yt_1_thumb.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/08_video_youtube_landscape_1/media/politician_portrait.jpg",
+  "text_preview": "【港区 とよさんぽ Vol.243】お台場ファウンテンー噴水なだけに湯水のごとくー【港区議会議員 とよ島くにひろ】#港区 #お台場海浜公園 #アクアシンフォニー"
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "17_special_live",
+  "label": "ライブ埋込",
+  "url": "https://go2senkyo.com/seijika/185863/posts/773050",
+  "title": "【参政党】街頭活動in東花園駅東大阪市議会議員選挙吉村だいき（応援演説：木下のぶお）投票日:2...",
+  "politician": {
+    "name": "橋口 かずや",
+    "name_reading": "",
+    "district": "選挙区",
+    "party": "",
+    "party_color": "#555555"
+  },
+  "media_specs": [
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=7ZXPMLmFxSk",
+      "embed_platform": "youtube",
+      "width": 1024,
+      "height": 1024,
+      "orientation": "square",
+      "size_tier": "normal",
+      "local_file": "yt_1_portrait.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/17_special_live/media/politician_portrait.jpg",
+  "text_preview": "【参政党】街頭活動 in 東花園駅 東大阪市議会議員選挙 吉村だいき（応援演説：木下 のぶお）投票日:2023年9月24日（日）_撮影日：202..."
+}

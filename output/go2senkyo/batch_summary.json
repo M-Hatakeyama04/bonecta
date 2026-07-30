@@ -1,0 +1,147 @@
+{
+  "ok": [
+    {
+      "slug": "01_images_landscape",
+      "label": "横画像",
+      "url": "https://go2senkyo.com/seijika/198426/posts/1348642",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/01_images_landscape/01_images_landscape.mp4",
+      "pattern": "images_landscape",
+      "status": "ok"
+    },
+    {
+      "slug": "02_images_landscape_small",
+      "label": "横画像（小）",
+      "url": "https://go2senkyo.com/seijika/193945/posts/1403337",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/02_images_landscape_small/02_images_landscape_small.mp4",
+      "pattern": "images_landscape",
+      "status": "ok"
+    },
+    {
+      "slug": "03_images_portrait",
+      "label": "縦画像",
+      "url": "https://go2senkyo.com/seijika/182830/posts/1403342",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/03_images_portrait/03_images_portrait.mp4",
+      "pattern": "images_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "04_images_mixed",
+      "label": "横+縦混在",
+      "url": "https://go2senkyo.com/seijika/157281/posts/1403336",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/04_images_mixed/04_images_mixed.mp4",
+      "pattern": "images_mixed",
+      "status": "ok"
+    },
+    {
+      "slug": "05_images_portrait_small",
+      "label": "縦画像（小）",
+      "url": "https://go2senkyo.com/seijika/185576/posts/515935",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/05_images_portrait_small/05_images_portrait_small.mp4",
+      "pattern": "images_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "06_no_images_with_thumb",
+      "label": "画像なし（サムネ）",
+      "url": "https://go2senkyo.com/seijika/183086/posts/1396802",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/06_no_images_with_thumb/06_no_images_with_thumb.mp4",
+      "pattern": "images_landscape",
+      "status": "ok"
+    },
+    {
+      "slug": "07_no_images_no_thumb",
+      "label": "画像なし",
+      "url": "https://go2senkyo.com/seijika/198127/posts/1403340",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/07_no_images_no_thumb/07_no_images_no_thumb.mp4",
+      "pattern": "images_portrait_small",
+      "status": "ok"
+    },
+    {
+      "slug": "08_video_youtube_landscape_1",
+      "label": "YouTube横",
+      "url": "https://go2senkyo.com/seijika/187819/posts/1403319",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/08_video_youtube_landscape_1/08_video_youtube_landscape_1.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "09_video_youtube_landscape_2",
+      "label": "YouTube横2",
+      "url": "https://go2senkyo.com/seijika/168370/posts/662536",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/09_video_youtube_landscape_2/09_video_youtube_landscape_2.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "10_video_youtube_short",
+      "label": "YouTube Short",
+      "url": "https://go2senkyo.com/seijika/166988/posts/1387097",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/10_video_youtube_short/10_video_youtube_short.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "11_video_portrait",
+      "label": "縦動画(FB)",
+      "url": "https://go2senkyo.com/seijika/77537/posts/1403327",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/11_video_portrait/11_video_portrait.mp4",
+      "pattern": "mixed_youtube_and_images",
+      "status": "ok"
+    },
+    {
+      "slug": "12_video_broken",
+      "label": "リンク切れ",
+      "url": "https://go2senkyo.com/seijika/148720/posts/1403333",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/12_video_broken/12_video_broken.mp4",
+      "pattern": "mixed_youtube_and_images",
+      "status": "ok"
+    },
+    {
+      "slug": "13_mixed_img_portrait_video",
+      "label": "横画像+縦動画",
+      "url": "https://go2senkyo.com/seijika/196232/posts/1279675",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/13_mixed_img_portrait_video/13_mixed_img_portrait_video.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "14_mixed_youtube_landscape_img",
+      "label": "YouTube+横画像",
+      "url": "https://go2senkyo.com/seijika/180432/posts/911646",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/14_mixed_youtube_landscape_img/14_mixed_youtube_landscape_img.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "15_mixed_youtube_short_portrait",
+      "label": "Short+縦画像",
+      "url": "https://go2senkyo.com/seijika/196232/posts/1285333",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/15_mixed_youtube_short_portrait/15_mixed_youtube_short_portrait.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "16_mixed_youtube_portrait_img",
+      "label": "YouTube+縦画像",
+      "url": "https://go2senkyo.com/seijika/191793/posts/831867",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/16_mixed_youtube_portrait_img/16_mixed_youtube_portrait_img.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    },
+    {
+      "slug": "18_special_embed",
+      "label": "特殊埋込",
+      "url": "https://go2senkyo.com/seijika/141939/posts/1364579",
+      "output": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/18_special_embed/18_special_embed.mp4",
+      "pattern": "mixed_landscape_video_portrait",
+      "status": "ok"
+    }
+  ],
+  "errors": [
+    {
+      "slug": "17_special_live",
+      "url": "https://go2senkyo.com/seijika/185863/posts/773050",
+      "error": "404 Client Error: Not Found for url: https://go2senkyo.com/seijika/185863/posts/773050"
+    }
+  ]
+}

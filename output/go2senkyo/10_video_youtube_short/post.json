@@ -1,0 +1,32 @@
+{
+  "slug": "10_video_youtube_short",
+  "label": "YouTube Short",
+  "url": "https://go2senkyo.com/seijika/166988/posts/1387097",
+  "title": "【練馬区議会レポート】50年前に5千万で購入した秩父の土地今、200万円で入札へ…。",
+  "politician": {
+    "name": "高口 ようこ",
+    "name_reading": "コウグチヨウコ",
+    "district": "練馬区議会議員",
+    "party": "",
+    "party_color": "#555555",
+    "age": "45歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=kCGh6uPF-y0",
+      "embed_platform": "youtube",
+      "is_live": false,
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "yt_1_thumb.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/10_video_youtube_short/media/politician_portrait.jpg",
+  "text_preview": "【練馬区議会レポート】\n50年前に5千万で\n購入した秩父の土地\n今、200万円で入札へ…\n。。。\n昭和49年、\n5077万円で購入した秩父の土地。\nしかし翌年、土地の多くが\n河川区域に指定され、\n活用が難しい状態に。\nその後、半世紀以上、\n管理コストをかけ続け、\n今回の入札価格は200万円。\n「もっと早く売却できなかったのか…？」\n議会で感じたことをお伝えします。\n👇詳細はブログで👇\nhttps:"
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "04_images_mixed",
+  "label": "横+縦混在",
+  "url": "https://go2senkyo.com/seijika/157281/posts/1403336",
+  "title": "6/8さいたま市議会6月定例会が始まりましたので、自民党の両会派と清水市長にご挨拶に伺いました...",
+  "politician": {
+    "name": "井原 ゆたか",
+    "name_reading": "イハラユタカ",
+    "district": "埼玉五区【さいたま市西区",
+    "party": "",
+    "party_color": "#555555",
+    "age": "43歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://go2senkyo-com-production-1.s3.ap-northeast-1.amazonaws.com/uploads/ckeditor/pictures/2227418/content_b4160136-5834-4e3c-a24b-363502dc6aa5.jpg",
+      "width": 800,
+      "height": 600,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "img_1.jpg",
+      "status": "available"
+    },
+    {
+      "id": "img_2",
+      "kind": "image",
+      "url": "https://go2senkyo-com-production-1.s3.ap-northeast-1.amazonaws.com/uploads/ckeditor/pictures/2227419/content_67cd935f-e0ae-4279-a539-892cca6dd1fa.jpg",
+      "width": 800,
+      "height": 600,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "img_2.jpg",
+      "status": "available"
+    },
+    {
+      "id": "img_3",
+      "kind": "image",
+      "url": "https://go2senkyo-com-production-1.s3.ap-northeast-1.amazonaws.com/uploads/ckeditor/pictures/2227420/content_d24e787b-af6f-47f1-b414-6b0f5f5125da.jpg",
+      "width": 600,
+      "height": 800,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_3.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/04_images_mixed/media/politician_portrait.jpg",
+  "text_preview": "6/8\nさいたま市議会6月定例会が始まりましたので、自民党の両会派と清水市長にご挨拶に伺いました\n清水市長とは国会での盆栽議連の立ち上げに向けて、さいたま市の盆栽の取り組みについて意見交換をさせていただきました。大宮の伝統・文化として多くの盆栽園がある一方で、その継承には課題があって、さいたま市と国で連携して対応していきたいと思っております\n市議会には岩槻のきれいな雛人形が飾ってありました。また来"
+}

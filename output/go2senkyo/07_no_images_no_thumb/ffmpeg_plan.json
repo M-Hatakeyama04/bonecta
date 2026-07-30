@@ -1,0 +1,58 @@
+{
+  "pattern_blocked": false,
+  "steps": [
+    {
+      "step": "segment_0",
+      "asset_id": "portrait",
+      "kind": "thumbnail",
+      "layout": "full",
+      "duration_sec": 20.0,
+      "fade_out_sec": 0.5,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "close",
+      "keep_audio": false
+    },
+    {
+      "step": "segment_1",
+      "asset_id": "end_card",
+      "kind": "end_card",
+      "layout": "blur_pillarbox",
+      "duration_sec": 2.5,
+      "fade_out_sec": 0.0,
+      "transition_zoom": false,
+      "blur_bg_motion": "none",
+      "crop_preset": "default",
+      "keep_audio": false
+    },
+    {
+      "step": "xfade",
+      "duration": 0.5
+    },
+    {
+      "step": "overlay",
+      "watermark": "山片 賢一",
+      "telops": [
+        "中野や高円寺の個人店に若い頃から飲み",
+        "に行っていましたが安くて美味しい店",
+        "が多く好きなエリア",
+        "その中野の象徴である中野サンプラザの行方",
+        "を見守っていました……（続く）"
+      ]
+    },
+    {
+      "step": "bgm",
+      "path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/bgm/BGM_2.mp3",
+      "has_video_audio": false
+    },
+    {
+      "step": "end_card",
+      "duration": 3.0
+    },
+    {
+      "step": "encode",
+      "output": "output/go2senkyo/07_no_images_no_thumb/07_no_images_no_thumb.mp4",
+      "resolution": "1080x1920"
+    }
+  ]
+}

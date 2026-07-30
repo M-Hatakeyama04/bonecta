@@ -1,0 +1,32 @@
+{
+  "slug": "11_video_portrait",
+  "label": "縦動画(FB)",
+  "url": "https://go2senkyo.com/seijika/77537/posts/1403327",
+  "title": "#佐久市🚒【令和８年度第１９回佐久市消防団消防ポンプ操法・ラッパ吹奏大会】が挙行され、小型ポン...",
+  "politician": {
+    "name": "清水 秀三郎",
+    "name_reading": "シミズヒデサブロウ",
+    "district": "佐久市議会議員",
+    "party": "",
+    "party_color": "#555555",
+    "age": "58歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "fb_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.facebook.com/video.php?v=1647973416504169",
+      "embed_platform": "facebook",
+      "is_live": false,
+      "width": 240,
+      "height": 279,
+      "orientation": "portrait",
+      "size_tier": "small",
+      "local_file": "fb_1_portrait.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/11_video_portrait/media/politician_portrait.jpg",
+  "text_preview": "#佐久市\n🚒【令和８年度 第１９回佐久市消防団 消防ポンプ操法・ラッパ吹奏大会】が挙行され、小型ポンプ操法の部で、地元の第１０分団が優勝されました㊗️\n私も指揮者として長野県大会に出場経験が有りますので、全面的に支援して参ります😃‼️"
+}

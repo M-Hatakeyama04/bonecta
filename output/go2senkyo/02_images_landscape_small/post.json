@@ -1,0 +1,41 @@
+{
+  "slug": "02_images_landscape_small",
+  "label": "横画像（小）",
+  "url": "https://go2senkyo.com/seijika/193945/posts/1403337",
+  "title": "🌳森ようすけ活動報告（6月5日）選挙制度改革の議論、保育園児の国会見学、党員システム刷新など",
+  "politician": {
+    "name": "森 ようすけ",
+    "name_reading": "モリヨウスケ",
+    "district": "選挙区",
+    "party": "",
+    "party_color": "#555555",
+    "age": "32歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://go2senkyo-com-production-1.s3.ap-northeast-1.amazonaws.com/uploads/ckeditor/pictures/2227422/c93eef83-75c3-497f-a954-802180b0b838.jpeg",
+      "width": 1347,
+      "height": 976,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "img_1.jpg",
+      "status": "available"
+    },
+    {
+      "id": "img_2",
+      "kind": "image",
+      "url": "https://go2senkyo-com-production-1.s3.ap-northeast-1.amazonaws.com/uploads/ckeditor/pictures/2227421/78abff4e-f729-40b2-bb62-1f24b224c6f3.jpeg",
+      "width": 1422,
+      "height": 1033,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "img_2.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/02_images_landscape_small/media/politician_portrait.jpg",
+  "text_preview": "お世話になっております。\n国民民主党 衆議院議員の森ようすけです🌳\n選挙制度改革に向けた党内議論から、地元の子どもたちの国会見学、党運営に関するシステム整備まで、幅広いテーマに取り組んだ一日となりました😊\n🗳️ 政治改革本部・選挙制度調査会\n総務省から国勢調査速報値の内容についてヒアリングを行いました。\n国勢調査の結果は、今後の衆議院小選挙区の区割り見直しにも大きく影響します。\nまた、\n📌 衆議院"
+}

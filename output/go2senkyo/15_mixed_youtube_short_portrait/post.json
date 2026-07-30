@@ -1,0 +1,43 @@
+{
+  "slug": "15_mixed_youtube_short_portrait",
+  "label": "Short+縦画像",
+  "url": "https://go2senkyo.com/seijika/196232/posts/1285333",
+  "title": "1/31.2/1は6箇所で街頭演説を予定",
+  "politician": {
+    "name": "天野 こころ",
+    "name_reading": "アマノココロ",
+    "district": "選挙区",
+    "party": "",
+    "party_color": "#555555",
+    "age": "36歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://amano-cocoro.com/wp-content/uploads/2026/01/0246276a6ead3ce2225b0273ece511fd-576x1024.jpg",
+      "width": 576,
+      "height": 1024,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_1.jpg",
+      "status": "available"
+    },
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=FjiiK_StQQI",
+      "embed_platform": "youtube",
+      "is_live": false,
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "yt_1_thumb.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/15_mixed_youtube_short_portrait/media/politician_portrait.jpg",
+  "text_preview": "今週末の土日は6箇所で街頭演説を予定しています。\n多くの方に集まっていただきたいです！\n天野こころに会いに来てください！"
+}

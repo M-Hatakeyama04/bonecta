@@ -1,0 +1,30 @@
+{
+  "slug": "01_images_landscape",
+  "label": "横画像",
+  "url": "https://go2senkyo.com/seijika/198426/posts/1348642",
+  "title": "【選挙戦最終日】最後まで走り切ります！！",
+  "politician": {
+    "name": "川崎 ようこ",
+    "name_reading": "カワサキヨウコ",
+    "district": "南房総市議会議員",
+    "party": "",
+    "party_color": "#555555",
+    "age": "51歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://go2senkyo-com-production-1.s3.ap-northeast-1.amazonaws.com/uploads/ckeditor/pictures/2141849/fc301b79-bd2c-4b1c-a4e7-e285edb75f39.png",
+      "width": 1200,
+      "height": 630,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "img_1.png",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/01_images_landscape/media/politician_portrait.jpg",
+  "text_preview": "この1週間、連日の大きな音で\n地域の皆さまにはご迷惑をおかけしましたが、\n温かいご理解とご協力に、心より感謝申し上げます。\n本日、23:59まで選挙運動が可能です。\nまだ時間はあります！\n最後まで、走り切ります！\nhttps://youtube.com/shorts/rLiRMcyREZg?feature=share"
+}

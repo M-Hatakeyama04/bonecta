@@ -1,0 +1,30 @@
+{
+  "slug": "05_images_portrait_small",
+  "label": "縦画像（小）",
+  "url": "https://go2senkyo.com/seijika/185576/posts/515935",
+  "title": "ボネクタブログ開始します。これからどうぞよろしくお願い致します。",
+  "politician": {
+    "name": "いそべ 尚哉",
+    "name_reading": "イソベナオヤ",
+    "district": "横浜市会議員(都筑区",
+    "party": "",
+    "party_color": "#555555",
+    "age": "48歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://prod-cdn.go2senkyo.com/uploads/ckeditor/pictures/679005/content_6d3b6342-86b4-4f0d-9247-9426eced2122.jpeg",
+      "width": 553,
+      "height": 800,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_1.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/05_images_portrait_small/media/politician_portrait.jpg",
+  "text_preview": "はじめまして。\n日本維新の会 横浜市都筑区 市政担当の\nいそべ 尚哉　と申します。\n昨秋より日本維新の会の一員として都筑区内で街頭等、日々活動しております。\nありがたいことに国政や市政、党へのご意見をいただく機会も増えてきております。見かけたら是非お声がけください。歓迎致します。\nただいまこのボネクタ上に、横浜市政への思いや政策、プロフィール等更新しておりますのでご覧下さいませ。\n今後このブログに"
+}

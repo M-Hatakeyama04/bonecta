@@ -1,0 +1,54 @@
+{
+  "slug": "16_mixed_youtube_portrait_img",
+  "label": "YouTube+縦画像",
+  "url": "https://go2senkyo.com/seijika/191793/posts/831867",
+  "title": "参政党の人々　埼玉県吉川市",
+  "politician": {
+    "name": "みやくぼ 雅一",
+    "name_reading": "ミヤクボマサカズ",
+    "district": "吉川市議会議員",
+    "party": "",
+    "party_color": "#555555",
+    "age": "49歳",
+    "gender": ""
+  },
+  "media_specs": [
+    {
+      "id": "img_1",
+      "kind": "image",
+      "url": "https://prod-cdn.go2senkyo.com/uploads/ckeditor/pictures/1178349/7ed61410-8c9a-4efd-a590-8a9aa4ebb6fb.jpg",
+      "width": 1108,
+      "height": 1477,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_1.jpg",
+      "status": "available"
+    },
+    {
+      "id": "img_2",
+      "kind": "image",
+      "url": "https://prod-cdn.go2senkyo.com/uploads/ckeditor/pictures/1178350/65f52017-1281-44b1-8d04-1d84a84736de.jpg",
+      "width": 1108,
+      "height": 1477,
+      "orientation": "portrait",
+      "size_tier": "normal",
+      "local_file": "img_2.jpg",
+      "status": "available"
+    },
+    {
+      "id": "yt_1",
+      "kind": "embed_thumbnail",
+      "url": "https://www.youtube.com/watch?v=lpK188tw67w",
+      "embed_platform": "youtube",
+      "is_live": false,
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "size_tier": "normal",
+      "local_file": "yt_1_thumb.jpg",
+      "status": "available"
+    }
+  ],
+  "portrait_path": "/Users/hatakeyamaichi-ni.jp/dev/myproject/move/output/go2senkyo/16_mixed_youtube_portrait_img/media/politician_portrait.jpg",
+  "text_preview": "新しいHPはこちら👉\nhttps://miyakubomasakazu.hp.peraichi.com/yoshikawa\n#みやくぼ雅一　＃吉川市政対策委員　＃参政党　＃誇れる日本を子供たちに"
+}

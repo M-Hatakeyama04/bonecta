@@ -1,0 +1,23 @@
+{
+  "photo_a_wide.jpg": {
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  "photo_b_tall.jpg": {
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  "photo_c_small.jpg": {
+    "orientation": "landscape",
+    "width": 640,
+    "height": 360,
+    "size_tier": "small"
+  },
+  "video_d_speech.mp4": {
+    "orientation": "landscape",
+    "duration_sec": 30,
+    "has_audio": true
+  }
+}
