@@ -13,16 +13,27 @@ __pycache__/
 .vscode/
 *.swp
 
-# Intermediate render work (do not upload)
+# Intermediate / debug artifacts
 output/**/.work/
 output/**/.work_preview/
+output/**/.preview_ui/
 output/.work/
 **/.work_preview/
 
-# Obsolete leftover source downloads (old yt-dlp / FB fetches; can be 300MB+)
-output/**/media/yt_*.mp4
-output/**/media/fb_*.mp4
-output/**/media/ig_*.mp4
-
-# Batch logs
+# Debug plans & logs
+output/**/ffmpeg_plan.json
+output/ffmpeg_plan.json
 output/**/*.log
+
+# Source media under outputs (regenerable by scrape; demos are final MP4s)
+output/**/media/
+
+# Unused legacy fonts (only NotoSansJP-VF.ttf is used)
+fonts/MPLUS1p-Medium.ttf
+fonts/ZenKakuGothicNew-Medium.ttf
+
+# Sample media for local demo only
+data/media/
+
+# Demo BGM duplicate
+bgm/sample_bgm.mp3
